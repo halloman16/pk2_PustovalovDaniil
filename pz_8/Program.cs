@@ -22,7 +22,7 @@ namespace pz_8
             {
                 if (myArr[i] % 2 == 0)
                 {
-                    Console.WriteLine(i);
+                    Console.WriteLine(i); // не знаю, как добавить индексы в новый массив, сделал вывод индексов
                 }
             }
             
