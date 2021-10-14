@@ -11,7 +11,6 @@ namespace pz_6
             int b = 0;
             int i = 1;
 
-
             while (i <= a)
             {
                 b = b + i;
