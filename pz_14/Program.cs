@@ -7,21 +7,21 @@ namespace pz_14
     {
         static void Main(string[] args)
         {
-            string path = @"C:\SomeDir";
+            string path = @"C:\SomeDir"; 
             string subpath = @"new";
             DirectoryInfo dirInfo = new DirectoryInfo(path);
-            if (!dirInfo.Exists)
+            if (!dirInfo.Exists) // создание папки SomeDir
             {
                 dirInfo.Create();
             }
-            dirInfo.CreateSubdirectory(subpath);
+            dirInfo.CreateSubdirectory(subpath); // создание папки new
 
             
-            var myFile = File.Create(@"C:\SomeDir\new\f2.txt");
+            var myFile = File.Create(@"C:\SomeDir\new\f2.txt"); // создание файла f2 
 
             myFile.Close();
 
-            File.AppendAllText(@"C:\SomeDir\new\f2.txt", File.ReadAllText(@"C:\SomeDir\f1.txt"));
+            File.AppendAllText(@"C:\SomeDir\new\f2.txt", File.ReadAllText(@"C:\SomeDir\f1.txt")); // копирование инфы из f1 в f2
 
         }
     }
