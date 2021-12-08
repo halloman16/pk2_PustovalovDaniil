@@ -11,7 +11,7 @@ namespace pz_17
             {
                 if (i < 0)
                 {                   
-                    n++;                    
+                    n++;        //проверяем значения температуры            
                 }               
             }
             Console.WriteLine("Количество дней, когда температура была ниже 0*C: "+n);
@@ -25,7 +25,7 @@ namespace pz_17
             int[] myArr = new int[elements];            
             for (int i = 0; i < myArr.Length; i++) 
             {
-                myArr[i] = int.Parse(Console.ReadLine()); 
+                myArr[i] = int.Parse(Console.ReadLine()); //спрашиваем темературу
             }
             Param(myArr); 
         }
