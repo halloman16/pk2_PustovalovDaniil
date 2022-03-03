@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pz_16", "pz_16\pz_16.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pz_17", "pz_17\pz_17.csproj", "{F1C5369E-B0E1-4003-BB15-EF50FEA24454}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PZ_3 (2 семестр)", "PZ_3 (2 семестр)\PZ_3 (2 семестр).csproj", "{F40083AE-0D92-4DBE-BC83-319E3678713F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PZ_3 (2 семестр)", "PZ_3 (2 семестр)\PZ_3 (2 семестр).csproj", "{F40083AE-0D92-4DBE-BC83-319E3678713F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator_Pustovalov_Smirnov", "..\..\..\Desktop\WpfApp1\WpfApp1\Calculator_Pustovalov_Smirnov.csproj", "{EF4C2C57-4357-414B-B52A-BC607841BAF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{F40083AE-0D92-4DBE-BC83-319E3678713F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F40083AE-0D92-4DBE-BC83-319E3678713F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F40083AE-0D92-4DBE-BC83-319E3678713F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF4C2C57-4357-414B-B52A-BC607841BAF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF4C2C57-4357-414B-B52A-BC607841BAF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF4C2C57-4357-414B-B52A-BC607841BAF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF4C2C57-4357-414B-B52A-BC607841BAF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
