@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace PZ_9_2semestr
 {
-    public delegate void Delegate();
+    public delegate void Delegate(); //создаем делегат
 
     class Counter
     {
-        public event Delegate onCount;
-        public void Count()
+        public event Delegate onCount; // создаем событие
+        public void Count() // делаем добавление объектов в класс через цикл
         {
             for (int i = 0; i < 35; i++)
             {
@@ -31,16 +31,16 @@ namespace PZ_9_2semestr
 
         public static void Message()
         {
-            Console.WriteLine("Уведомление! Ограничение по визитам - 30!");
+            Console.WriteLine("Уведомление! Ограничение по визитам - 30!"); // содержание события
         }
 
         static void Main(string[] args)
         {
-            Counter counter = new Counter();
+            Counter counter = new Counter(); 
 
-            counter.onCount += Message;
+            counter.onCount += Message;// назначаем содержание для события
 
-            counter.Count();
+            counter.Count(); //выполняем код
 
         }
         
