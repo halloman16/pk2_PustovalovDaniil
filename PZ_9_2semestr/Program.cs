@@ -4,44 +4,61 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+public delegate void del(); // делегатикус
 namespace PZ_9_2semestr
 {
-    public delegate void Delegate(); //создаем делегат
-
-    class Counter
+    // Смирнов, Пустовалов, 6 вариант
+    class Посетитель // тот самый visitor ну на русском посетитель
     {
-        public event Delegate onCount; // создаем событие
-        public void Count() // делаем добавление объектов в класс через цикл
+        public static int количество_посетителей = 1;
+        public Boolean b = true;
+        public void Добавить_посетителя() // ну по названию всё достаточно понятно этот метод добавляет эти самые объекты
         {
-            for (int i = 0; i < 35; i++)
-            {
-                Console.WriteLine(i);
-                if (i == 30)
-                {
-                    onCount();
-                    break;
-                }
-            }
-            Console.ReadLine();
+            Контролер Иван = new Контролер(количество_посетителей, b); // вот создание значит
+            Console.WriteLine($"Иван Иванов Иванович {количество_посетителей}"); // ну тут создаст кучу объектов одинаковых людей можете им имя поменять будет 30 других человечков
+            количество_посетителей++; // погнали спавн
+            Иван.ActivateEvent(); // тут в дело вступает снизу событие event которое то самое
+            b = Иван.b; // присваивание для использования в контроллере
         }
     }
-
-    public static class Program
+    class Контролер // класс контроллер тот самый который выводит сообщение и всё такое по заданию там
     {
-
-        public static void Message()
+        public int посетители; // нужно переменные посетители
+        public Boolean b = true;
+        public event del Событие; // ура ура event событие работаем
+        public Контролер(int a, Boolean b)
         {
-            Console.WriteLine("Уведомление! Ограничение по визитам - 30!"); // содержание события
+            посетители = a;
+            b = b;
         }
-
+        public void ActivateEvent() // тут event событие на то самое ограничение в 30 человек
+        {
+            if (посетители >= 30)
+            {
+                Событие = Уведомление;
+            }
+            if (Событие != null)
+            {
+                Событие();
+            }
+        }
+        void Уведомление() // уведомление ну понятно выводит сообщение и стопает тут всё насмерть
+        {
+            Console.WriteLine("Места ограничены");
+            b = false;
+        }
+    }
+    class Program
+    {
         static void Main(string[] args)
         {
-            Counter counter = new Counter(); 
+            Посетитель Он = new Посетитель(); // ура новый посетитель
 
-            counter.onCount += Message;// назначаем содержание для события
-
-            counter.Count(); //выполняем код
-
+            while (Он.b) // а тут пока не остановит ивент нас всех то будет новый и новый объект
+            {
+                Он.Добавить_посетителя();
+            }
+            Console.ReadLine();
         }
         
     }
