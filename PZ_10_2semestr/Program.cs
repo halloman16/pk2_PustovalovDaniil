@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PZ_10_2semestr
 {
-    struct NOTE
+    struct NOTE // структура
     {
         public string NAME;
         public long TELE;
@@ -14,18 +14,15 @@ namespace PZ_10_2semestr
     }
 
     internal class Program
-    {
-        
-        
-        
+    {       
 
         static void Main(string[] args)
         {
             
 
-            NOTE[] BLOCKNOTE = new NOTE[2];
+            NOTE[] BLOCKNOTE = new NOTE[8]; //массив структуры
 
-            for (int i = 0; i < BLOCKNOTE.Length; i++)
+            for (int i = 0; i < BLOCKNOTE.Length; i++) // внесение инфы о челиках в массив структуры
             {
                 Console.WriteLine($"ЧЕЛОВЕК {i + 1} \n");
 
@@ -43,10 +40,10 @@ namespace PZ_10_2semestr
 
             }
 
-            Console.WriteLine("введи крч ты понял");
+            Console.Write("Введите имя и фамилию человека, которого желаете найти: "); // запрос на поиск
             string name = Console.ReadLine();
 
-            for (int i = 0; i < BLOCKNOTE.Length; i++)
+            for (int i = 0; i < BLOCKNOTE.Length; i++) // поиск и вывод
             {
                 if (name == BLOCKNOTE[i].NAME)
                 {
